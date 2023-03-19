@@ -6,5 +6,5 @@ To run:
 $ docker pull ghcr.io/kd6kxr/rawtherapee_docker-image:latest
 ```
 
-<img src="docker-optional-settings.png"  width="400" height="600">
+<img src="docker-optional-settings.png"  width="500" height="600">
 ### Note: replace with your IPv4 address in the Environment Value field.
