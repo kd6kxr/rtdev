@@ -29,6 +29,7 @@ $ docker pull ghcr.io/kd6kxr/rawtherapee_docker-image:latest
 4. Enter the volumes to map and the DISPLAY environment value `host.docker.internal:0`
 <img src="https://raw.githubusercontent.com/kd6kxr/rtdev/main/mac-docker-options.png" alt="config options" width="550">
 
+#### should result in an resizable RawTherapee window.
 
 ## On MacOS 11+:
 Pre-requisite: Install the X11 Window System: [XQuartz](https://www.xquartz.org)
@@ -45,7 +46,7 @@ xhost +localhost
 3. Enter the volumes to map and the DISPLAY environment value `host.docker.internal:0`
 <img src="https://raw.githubusercontent.com/kd6kxr/rtdev/main/mac-docker-options.png" alt="config options" width="550">
 
-#### should result in an optimum-sized RawTherapee window within.
+#### should result in an optimum-sized RawTherapee window.
 <hr>
 
 ## Troubleshooting:
