@@ -27,7 +27,7 @@ $ docker pull ghcr.io/kd6kxr/rawtherapee_docker-image:latest
 ##### In *Docker Desktop*:
 3. Select the image in the Images tab and click *Run*.
 4. Enter the volumes to map and the DISPLAY environment value `host.docker.internal:0`
-<img src="https://raw.githubusercontent.com/kd6kxr/rtdev/main/mac-docker-options.png" alt="config options" width="550">
+<img src="https://raw.githubusercontent.com/kd6kxr/rtdev/main/windows-docker-options.png" alt="config options" width="550">
 
 #### should result in an resizable RawTherapee window.
 
