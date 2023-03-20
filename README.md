@@ -1,22 +1,33 @@
 # rawtherapee-dev
+
 This repo can build an image of rawtherapee-dev and push it to the Github Container Registry.
 
-How to download the docker image:
+<hr>
+
+## Launching ghcr.io/kd6kxr/rawtherapee_docker-image
+
+### Pre-requisites:
+ 
+1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+2. Login to [Github Container Registry](https://ghcr.io) with your own Github `username` and a properly scoped `token`:
+
+`docker login -u username -p token ghcr.io`
+
+3. Download rawtherapee_docker-image:
 ```
 $ docker pull ghcr.io/kd6kxr/rawtherapee_docker-image:latest
 ```
-
-
 
 ## Windows 11+:
 - Pre-requisite: Install the [Linux Subsystem for Windows via the Microsoft Store](https://www.microsoft.com/store/productId/9P9TQF7MRM4R).
 - Pre-requisite: Install the X11 Window System: [Xming](http://www.straightrunning.com/XmingNotes/)
 
 1. Launch Xming by double-clicking the Xming icon.
-##### Docker Desktop:
+##### In *Docker Desktop*:
 3. Select the image in the Images tab and click *Run*.
 4. Enter the volumes to map and the DISPLAY environment value `host.docker.internal:0`
-<img src="mac-docker-options.png"  width="550">
+<img src="https://raw.githubusercontent.com/kd6kxr/rtdev/main/mac-docker-options.png" alt="config options" width="550">
 
 
 ## On MacOS 11+:
@@ -30,13 +41,15 @@ Pre-requisite: Install the X11 Window System: [XQuartz](https://www.xquartz.org)
 xhost +localhost
 /opt/X11/bin/Xquartz -depth 24-1 :0 -listen tcp &
 ```
+##### In *Docker Desktop*:
 3. Enter the volumes to map and the DISPLAY environment value `host.docker.internal:0`
-<img src="mac-docker-options.png"  width="550">
+<img src="https://raw.githubusercontent.com/kd6kxr/rtdev/main/mac-docker-options.png" alt="config options" width="550">
 
-#### Note: opening the Xquartz tcp listener in xterm results in an optimum-sized RawTherapee window.
+#### should result in an optimum-sized RawTherapee window within.
+<hr>
 
-Command Line:
+## Troubleshooting:
 
-```
-docker run -it -rm -e DISPLAY=host.docker.internal:0 -v ~:/hi ghcr.io/kd6kxr/rawtherapee_docker-image:latest
-```
+### if the screen is unresponsive at first
+- you may need to first dismiss a partially hidden welcome splash screen on the first run of that container.
+<img src="https://raw.githubusercontent.com/kd6kxr/rtdev/main/splash.png" alt="hidden splash screen" width="550">
