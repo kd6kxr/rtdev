@@ -26,4 +26,5 @@ xhost +localhost
 ```
 3. Launch the image using the host display value indicated here:
 <img src="mac-docker-options.png"  width="550">
+
 #### Note: opening the Xquartz tcp listener in xterm results in an optimum-sized RawTherapee window.
