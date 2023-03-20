@@ -13,8 +13,9 @@ Pre-requisite: Install the X11 Window System: [Xming](http://www.straightrunning
 
 1. 
 2. Select the image in the Images tab and click *Run*.
-<img src="docker-optional-settings.png"  width="550">
-#### Note: replace with your IPv4 address in the Environment Value field, followed by `:0` (colon zero).
+3. Enter the volumes to map and the DISPLAY environment value `host.docker.internal:0`
+<img src="mac-docker-options.png"  width="550">
+
 
 ## On MacOS:
 Pre-requisite: Install the X11 Window System: [XQuartz](https://www.xquartz.org)
@@ -24,7 +25,7 @@ Pre-requisite: Install the X11 Window System: [XQuartz](https://www.xquartz.org)
 xhost +localhost
 /opt/X11/bin/Xquartz -depth 24-1 :0 -listen tcp &
 ```
-3. Launch the image using the `host.docker.internal:0` display value as shown here:
+3. Enter the volumes to map and the DISPLAY environment value `host.docker.internal:0`
 <img src="mac-docker-options.png"  width="550">
 
 #### Note: opening the Xquartz tcp listener in xterm results in an optimum-sized RawTherapee window.
